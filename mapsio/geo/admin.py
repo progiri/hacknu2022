@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import GeoDataPacket
 
-# Register your models here.
+
+@admin.register(GeoDataPacket)
+class GroupUserAdmin(admin.ModelAdmin):
+    list_display = ('id', 'identifier')
